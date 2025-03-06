@@ -95,4 +95,5 @@ static void helloWorld()
     } else {
         cout << "Hello " << nameLower;
     }
+    appStart();
 }

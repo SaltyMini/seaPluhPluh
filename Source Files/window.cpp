@@ -1,5 +1,7 @@
 #include "../Header Files/window.h"
 #include <iostream>
+#include <dwmapi.h>
+#pragma comment(lib, "dwmapi.lib")
 
 LRESULT WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
@@ -15,16 +17,21 @@ LRESULT WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
+            
+
+            HBRUSH hBrush = CreateSolidBrush(RGB(8, 132, 132));
+            FillRect(hdc, &ps.rcPaint, hBrush);
+            DeleteObject(hBrush);
 
             SetTextColor(hdc, RGB(0, 0, 255));
             SetBkColor(hdc, RGB(255, 255, 255));
+            SetBkMode(hdc, TRANSPARENT);
 
             TextOutW(hdc, 10, 10, L"Hello, World!", 13);
 
 
 
 
-            FillRect(hdc, &ps.rcPaint, (HBRUSH)(COLOR_WINDOW + 1));
             EndPaint(hWnd, &ps);
         }
     }
@@ -80,6 +87,9 @@ Window::Window()
         DWORD error = GetLastError();
         std::cout << error;
     }
+
+    BOOL darkmode = TRUE;
+    DwmSetWindowAttribute(m_hWnd, DWMWA_USE_IMMERSIVE_DARK_MODE, &darkmode, sizeof(darkmode));
 
     ShowWindow(m_hWnd, SW_SHOWDEFAULT);
 }
