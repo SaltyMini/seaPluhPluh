@@ -5,6 +5,8 @@
 #include <windows.h>
 #include "../Header Files/window.h"
 
+#include "utils.cpp"
+
 using namespace std;
 
 
@@ -29,18 +31,15 @@ static void appStart()
     cout << "Select app to start, ";
     cin >> appSelection;
 
-    string appSelectionLower = "";
-    for(char c : appSelection) {
-        appSelectionLower += tolower(c);
-    }
+    appSelection = toLowerString(appSelection);
     
-    if(appSelectionLower == "helloworld") {
+    if(appSelection == "helloworld") {
         helloWorld();
-    } else if (appSelectionLower == "help") 
+    } else if (appSelection == "help") 
     {
         cout << "Help";
         appStart();
-    } else if (appSelectionLower == "desktop") {
+    } else if (appSelection == "desktop") {
 
         cout << "Creating Window" << endl;
 
@@ -79,21 +78,18 @@ static void helloWorld()
     cout << endl; 
 
     string name = "";
-    string nameLower = "";
 
     cout << "What is your name?" << endl;
     cin >> name;
     
-    for(char c : name) {
-        nameLower += tolower(c);
-    }
+    name = toLowerString(name);
 
-    nameLower[0] = toupper(nameLower[0]);
+    name[0] = toupper(name[0]);
 
     if(name == "zeb") {
         cout << "Fuck you";
     } else {
-        cout << "Hello " << nameLower;
+        cout << "Hello " << name;
     }
     appStart();
 }
