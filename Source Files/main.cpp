@@ -26,12 +26,16 @@ static void appStart()
 {
     vector<string> apps = {"helloworld", "desktop"};
 
-    string appSelection = "";
+
     cout << "Type Help for Help" << endl;
     cout << "Select app to start, ";
-    cin >> appSelection;
+
+    string input = "nothing";
+    cin >> input;
 
     appSelection = toLowerString(appSelection);
+
+
     
     if(appSelection == "helloworld") {
         helloWorld();
