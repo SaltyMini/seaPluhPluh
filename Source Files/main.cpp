@@ -19,56 +19,76 @@ int main()
 
     appStart();
 
+    try {
+		appStart2();
+	}
+	catch (exception) {
+		cout << "Error: " << e.what() << endl;
+	}
+
     return 0;
 }
 
-static void appStart() 
+static bool appStart2()
 {
-    vector<string> apps = {"helloworld", "desktop"};
-
 
     cout << "Type Help for Help" << endl;
     cout << "Select app to start, ";
 
     string input = "nothing";
-    cin >> input;
+	cin >> input;
 
-    appSelection = toLowerString(appSelection);
+	input = toLowerString(input);
 
-
-    
-    if(appSelection == "helloworld") {
-        helloWorld();
-    } else if (appSelection == "help") 
-    {
-        cout << "Help";
-        appStart();
-    } else if (appSelection == "desktop") {
-
-        cout << "Creating Window" << endl;
-
-        Window* pWindow = new Window();
-
-        bool running = true;
-        while (running)
-        {
-            if (!pWindow->processMessages())
-            {
-                cout << "Closing Window" << endl;
-            }
-            
-            //render
-
-            Sleep(10);
-        }
-        delete pWindow;
-
-
-    } else {
-        cout << "Invalid Selection" << endl;
-        appStart();
+    case(input) {
+	case "helloworld":
+		helloWorld();
+		break;
+	case "desktop":
+		cout << "Creating Window" << endl;
+		desktopStart();
+		break;
+	case "help":
+		help();
+		break;
+	case "exit":
+		cout << "Exiting" << endl;
+		return true;
+	default:
+		cout << "Invalid Selection, type help for help" << endl;
+		appStart2();
     }
 
+}
+
+static void desktopStart()
+{
+    cout << "Creating Window" << endl;
+
+    Window* pWindow = new Window();
+
+    bool running = true;
+    while (running)
+    {
+        if (!pWindow->processMessages())
+        {
+            cout << "Closing Window" << endl;
+        }
+
+        //render
+
+        Sleep(10);
+    }
+    delete pWindow;
+
+}
+
+static void help() {
+    cout << "Help Menu" << endl;
+	cout << "helloworld - Starts the Hello World app" << endl;
+	cout << "desktop - Starts the Desktop app" << endl;
+	cout << "help - Shows this help menu" << endl;
+	cout << "exit - Exits the program" << endl;
 }
 
 static void helloWorld() 
