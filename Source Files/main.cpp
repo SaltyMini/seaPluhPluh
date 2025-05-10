@@ -22,14 +22,11 @@ int helpExplain = 0;
 
 int main()
 {
+    SetConsoleTitleW(L"Hello World"); 
+
     bool sucsess = appStart();
-    
-    if(!sucsess)
-    {
-        //app failed
-        shutdown();
-    }
-    
+
+pWindow = createConfiguredWindow(800, 600, 0, 0, L"My Window");
     
     return 0;
 }
@@ -43,7 +40,7 @@ static bool appStart()
     helpExplain = 1;
 
     cout << "Select app to start, ";
-
+    
     string input = "nothing";
     cin >> input;
 
@@ -146,3 +143,7 @@ static void shutdown()
     exit(0);
 
 }
+
+
+
+//Break out game down here,
