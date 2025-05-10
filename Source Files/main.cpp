@@ -5,8 +5,8 @@
 #include <conio.h>
 #include <windows.h>
 #include "../Header Files/window.h"
-
-#include "../Source Files/utils/utils.cpp"
+#include "../Header Files/consoleColourUtil.h"
+#include "../Header Files/utils.hpp"
 
 using namespace std;
 
@@ -18,25 +18,30 @@ static void desktopStart();
 static void help();
 static void shutdown();
 
+int helpExplain = 0;
+
 int main()
 {
-
     bool sucsess = appStart();
-
+    
     if(!sucsess)
     {
         //app failed
         shutdown();
     }
-
-
+    
+    
     return 0;
 }
 
 static bool appStart()
 {
+    
+    if(helpExplain == 0) {
+        cout << "Type Help for Help" << endl;
+    }
+    helpExplain = 1;
 
-    cout << "Type Help for Help" << endl;
     cout << "Select app to start, ";
 
     string input = "nothing";
@@ -89,11 +94,14 @@ static void desktopStart()
 }
 
 static void help() {
+    setConsoleColor(ConsoleColor::BRIGHT_CYAN);
     cout << "Help Menu" << endl;
-	cout << "helloworld - Starts the Hello World app" << endl;
-	cout << "desktop - Starts the Desktop app" << endl;
-	cout << "help - Shows this help menu" << endl;
-	cout << "exit - Exits the program" << endl;
+    setConsoleColor(ConsoleColor::CYAN);
+    cout << "helloworld - Starts the Hello World app" << endl;
+    cout << "desktop - Starts the Desktop app" << endl;
+    cout << "help - Shows this help menu" << endl;
+    cout << "exit - Exits the program" << endl;
+    resetConsoleColor();
 }
 
 static void helloWorld() 
@@ -120,6 +128,7 @@ static void helloWorld()
     } else {
         cout << "Hello " << name;
     }
+    cout << endl;
     appStart();
 }
 
