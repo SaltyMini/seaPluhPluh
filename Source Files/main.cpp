@@ -20,13 +20,23 @@ static void shutdown();
 
 int helpExplain = 0;
 
+
 int main()
 {
     SetConsoleTitleW(L"Hello World"); 
 
-    bool sucsess = appStart();
+    string input = "";
+    cout << "generate new window? (y/n)" << endl;
+    cin >> input;
+    input = toLowerString(input);
+    if (input == "y") {
+        cout << "Creating new window" << endl;
+        //TODO: Create new window
+    } else {
+        cout << "Not creating new window" << endl;
+    }
 
-pWindow = createConfiguredWindow(800, 600, 0, 0, L"My Window");
+    bool sucsess = appStart();
     
     return 0;
 }
