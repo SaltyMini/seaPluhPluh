@@ -18,22 +18,26 @@ static void desktopStart();
 static void help();
 static void shutdown();
 
+static int getWindowSize();
+
 int helpExplain = 0;
 
 
 int main()
 {
     SetConsoleTitleW(L"Hello World"); 
+    Sleep(100);
+    
 
-    string input = "";
-    cout << "generate new window? (y/n)" << endl;
-    cin >> input;
-    input = toLowerString(input);
-    if (input == "y") {
-        cout << "Creating new window" << endl;
-        //TODO: Create new window
-    } else {
-        cout << "Not creating new window" << endl;
+    //check if running as admin
+    int width = getWindowSize();
+    if (width == 0) {
+        setConsoleColor(ConsoleColor::BRIGHT_RED);
+        cout << "Starting in defualt mode" << endl;
+        cout << "Run as admin for enchanced user experience" << endl;
+        resetConsoleColor();
+        Sleep(3000)
+        system("cls");
     }
 
     bool sucsess = appStart();
@@ -56,27 +60,56 @@ static bool appStart()
 
     input = toLowerString(input);
 
-    if (input == "helloworld") {
-        helloWorld();
-    } else if (input == "desktop") {
-        cout << "Creating Window" << endl;
-        desktopStart();
-    } else if (input == "help") {
-        help();
-        appStart();
-    } else if (input == "exit") {
-        cout << "Exiting" << endl;
-        shutdown();
-        return true;
+    vector<string> options = {"helloworld", "desktop", "breakout", "help", "exit"};
+
+    auto it = find(options.begin(), options.end(), input);
+    if(it != options.end()) {
+        int index = it - options.begin();
+        switch (index) {
+            case 0:
+                cout << "Starting Hello World" << endl;
+                helloWorld();
+                break;
+            case 1:
+                cout << "Starting Desktop" << endl;
+                desktopStart();
+                break;
+            case 2:
+                cout << "Starting Breakout" << endl;
+                // Call the function to start the Breakout game here
+                break;
+            case 3:
+                cout << "Starting Help" << endl;
+                help();
+                appStart();
+                break;
+            case 4:
+                cout << "Exiting" << endl;
+                shutdown();
+                return true;
+                break;
+        }
+
     } else {
         cout << "Invalid Selection, type help for help" << endl;
         appStart();
     }
 
-    return true;
-
 }
 
+static int getWindowSize() {
+    HWND console = GetConsoleWindow();
+    RECT r;
+    GetWindowRect(console, &r);
+    
+    int width = r.right - r.left;
+    int height = r.bottom - r.top;
+    
+    cout << "Window width: " << width << endl;
+    cout << "Window height: " << height << endl;
+
+    return width;
+}
 
 static void desktopStart()
 {
@@ -130,7 +163,7 @@ static void helloWorld()
 
     name[0] = toupper(name[0]);
 
-    if(name == "zeb") {
+    if(name == "Zeb") {
         cout << "Fuck you";
     } else {
         cout << "Hello " << name;
@@ -146,7 +179,6 @@ static void shutdown()
     {
         delete pWindow;
     }
-
 
     cout << "\nPress any key to exit...";
     _getch();  // Wait for any key press
