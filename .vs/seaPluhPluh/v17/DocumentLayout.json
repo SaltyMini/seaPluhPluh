@@ -1,29 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\",
+  "WorkspaceRootPath": "C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\Header Files\\window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Header Files\\window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\Source Files\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\Source Files\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Source Files\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\Source Files\\utils\\help.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\Header Files\\window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Header Files\\window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\Source Files\\utils\\help.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Source Files\\utils\\help.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\Source Files\\window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\Source Files\\window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Source Files\\window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\terminal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\terminal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:terminal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\Source Files\\utils\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\Source Files\\utils\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Source Files\\utils\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -38,11 +38,11 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "window.h",
-              "DocumentMoniker": "C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\Header Files\\window.h",
+              "DocumentMoniker": "C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\Header Files\\window.h",
               "RelativeDocumentMoniker": "Header Files\\window.h",
-              "ToolTip": "C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\Header Files\\window.h",
+              "ToolTip": "C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\Header Files\\window.h",
               "RelativeToolTip": "Header Files\\window.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -53,9 +53,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "window.cpp",
-              "DocumentMoniker": "C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\Source Files\\window.cpp",
+              "DocumentMoniker": "C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\Source Files\\window.cpp",
               "RelativeDocumentMoniker": "Source Files\\window.cpp",
-              "ToolTip": "C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\Source Files\\window.cpp",
+              "ToolTip": "C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\Source Files\\window.cpp",
               "RelativeToolTip": "Source Files\\window.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -66,9 +66,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "help.cpp",
-              "DocumentMoniker": "C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\Source Files\\utils\\help.cpp",
+              "DocumentMoniker": "C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\Source Files\\utils\\help.cpp",
               "RelativeDocumentMoniker": "Source Files\\utils\\help.cpp",
-              "ToolTip": "C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\Source Files\\utils\\help.cpp",
+              "ToolTip": "C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\Source Files\\utils\\help.cpp",
               "RelativeToolTip": "Source Files\\utils\\help.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -79,9 +79,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "terminal.cpp",
-              "DocumentMoniker": "C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\terminal.cpp",
+              "DocumentMoniker": "C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\terminal.cpp",
               "RelativeDocumentMoniker": "terminal.cpp",
-              "ToolTip": "C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\terminal.cpp",
+              "ToolTip": "C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\terminal.cpp",
               "RelativeToolTip": "terminal.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -98,9 +98,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "utils.cpp",
-              "DocumentMoniker": "C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\Source Files\\utils\\utils.cpp",
+              "DocumentMoniker": "C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\Source Files\\utils\\utils.cpp",
               "RelativeDocumentMoniker": "Source Files\\utils\\utils.cpp",
-              "ToolTip": "C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\Source Files\\utils\\utils.cpp",
+              "ToolTip": "C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\Source Files\\utils\\utils.cpp",
               "RelativeToolTip": "Source Files\\utils\\utils.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAkwBYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -109,13 +109,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\Source Files\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\Source Files\\main.cpp",
               "RelativeDocumentMoniker": "Source Files\\main.cpp",
-              "ToolTip": "C:\\yumm\\c\u002B\u002B\\seaPluhPluh\\Source Files\\main.cpp",
+              "ToolTip": "C:\\Users\\samcl\\IdeaProjects\\bedrockBreaker\\seaPluhPluh\\Source Files\\main.cpp",
               "RelativeToolTip": "Source Files\\main.cpp",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwEkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAIwFIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-09T01:52:19.818Z",
               "EditorCaption": ""
