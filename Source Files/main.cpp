@@ -2,70 +2,75 @@
 #include <vector>
 #include <string>
 #include <cctype>
+#include <conio.h>
 #include <windows.h>
 #include "../Header Files/window.h"
 
-#include "utils.cpp"
+#include "../Source Files/utils/utils.cpp"
 
 using namespace std;
 
+Window* pWindow = 0;
 
 static void helloWorld();
-static void appStart();
-
+static bool appStart();
+static void desktopStart();
+static void help();
+static void shutdown();
 
 int main()
 {
 
-    appStart();
+    bool sucsess = appStart();
 
-    try {
-		appStart2();
-	}
-	catch (exception) {
-		cout << "Error: " << e.what() << endl;
-	}
+    if(!sucsess)
+    {
+        //app failed
+        shutdown();
+    }
+
 
     return 0;
 }
 
-static bool appStart2()
+static bool appStart()
 {
 
     cout << "Type Help for Help" << endl;
     cout << "Select app to start, ";
 
     string input = "nothing";
-	cin >> input;
+    cin >> input;
 
-	input = toLowerString(input);
+    input = toLowerString(input);
 
-    case(input) {
-	case "helloworld":
-		helloWorld();
-		break;
-	case "desktop":
-		cout << "Creating Window" << endl;
-		desktopStart();
-		break;
-	case "help":
-		help();
-		break;
-	case "exit":
-		cout << "Exiting" << endl;
-		return true;
-	default:
-		cout << "Invalid Selection, type help for help" << endl;
-		appStart2();
+    if (input == "helloworld") {
+        helloWorld();
+    } else if (input == "desktop") {
+        cout << "Creating Window" << endl;
+        desktopStart();
+    } else if (input == "help") {
+        help();
+        appStart();
+    } else if (input == "exit") {
+        cout << "Exiting" << endl;
+        shutdown();
+        return true;
+    } else {
+        cout << "Invalid Selection, type help for help" << endl;
+        appStart();
     }
 
+    return true;
+
 }
+
 
 static void desktopStart()
 {
     cout << "Creating Window" << endl;
 
-    Window* pWindow = new Window();
+    pWindow = new Window();
 
     bool running = true;
     while (running)
@@ -116,4 +121,19 @@ static void helloWorld()
         cout << "Hello " << name;
     }
     appStart();
+}
+
+static void shutdown()
+{
+
+    if(pWindow == 0)
+    {
+        delete pWindow;
+    }
+
+
+    cout << "\nPress any key to exit...";
+    _getch();  // Wait for any key press
+    exit(0);
+
 }
