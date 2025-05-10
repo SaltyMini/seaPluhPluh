@@ -1,16 +1,18 @@
 #pragma once
 #include <iostream>
-#include <string>
 
 class Breakout {
     public:
-        bool startGame();
-        void stopGame();
-    private:
         Breakout();
         ~Breakout();
+        
+        // Game control methods
+        void startGame();
+        void stopGame();
         void pause();
         void resume();
         void reset();
 
-}
+    private:
+        bool isRunning;
+}; 

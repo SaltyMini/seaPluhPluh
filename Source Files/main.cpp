@@ -4,9 +4,12 @@
 #include <cctype>
 #include <conio.h>
 #include <windows.h>
+#include <algorithm>
 #include "../Header Files/window.h"
 #include "../Header Files/consoleColourUtil.h"
 #include "../Header Files/utils.hpp"
+#include "../Header Files/breakout.hpp"
+#include "../Header Files/breakoutUtils.hpp"
 
 using namespace std;
 
@@ -18,8 +21,6 @@ static void desktopStart();
 static void help();
 static void shutdown();
 
-static int getWindowSize();
-
 int helpExplain = 0;
 
 
@@ -27,18 +28,6 @@ int main()
 {
     SetConsoleTitleW(L"Hello World"); 
     Sleep(100);
-    
-
-    //check if running as admin
-    int width = getWindowSize();
-    if (width == 0) {
-        setConsoleColor(ConsoleColor::BRIGHT_RED);
-        cout << "Starting in defualt mode" << endl;
-        cout << "Run as admin for enchanced user experience" << endl;
-        resetConsoleColor();
-        Sleep(3000)
-        system("cls");
-    }
 
     bool sucsess = appStart();
     
@@ -61,6 +50,7 @@ static bool appStart()
     input = toLowerString(input);
 
     vector<string> options = {"helloworld", "desktop", "breakout", "help", "exit"};
+    Breakout breakout;
 
     auto it = find(options.begin(), options.end(), input);
     if(it != options.end()) {
@@ -76,7 +66,11 @@ static bool appStart()
                 break;
             case 2:
                 cout << "Starting Breakout" << endl;
-                // Call the function to start the Breakout game here
+                if(!isRunningAsAdmin()) {
+                    cout << "Please run as admin" << endl;
+                    appStart();
+                }
+                breakout.startGame();
                 break;
             case 3:
                 cout << "Starting Help" << endl;
@@ -94,21 +88,7 @@ static bool appStart()
         cout << "Invalid Selection, type help for help" << endl;
         appStart();
     }
-
-}
-
-static int getWindowSize() {
-    HWND console = GetConsoleWindow();
-    RECT r;
-    GetWindowRect(console, &r);
-    
-    int width = r.right - r.left;
-    int height = r.bottom - r.top;
-    
-    cout << "Window width: " << width << endl;
-    cout << "Window height: " << height << endl;
-
-    return width;
+    return false;
 }
 
 static void desktopStart()
@@ -139,6 +119,7 @@ static void help() {
     setConsoleColor(ConsoleColor::CYAN);
     cout << "helloworld - Starts the Hello World app" << endl;
     cout << "desktop - Starts the Desktop app" << endl;
+    cout << "breakout - Starts the Breakout game" << endl;
     cout << "help - Shows this help menu" << endl;
     cout << "exit - Exits the program" << endl;
     resetConsoleColor();
@@ -160,7 +141,6 @@ static void helloWorld()
     cin >> name;
     
     name = toLowerString(name);
-
     name[0] = toupper(name[0]);
 
     if(name == "Zeb") {

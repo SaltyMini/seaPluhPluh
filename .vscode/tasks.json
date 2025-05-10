@@ -12,6 +12,8 @@
                 "${workspaceFolder}\\Source Files\\window.cpp",
                 "${workspaceFolder}\\Source Files\\utils\\utils.cpp",
                 "${workspaceFolder}\\Source Files\\utils\\consoleColourUtil.cpp",
+                "${workspaceFolder}\\Source Files\\breakout.cpp",
+                "${workspaceFolder}\\Source Files\\utils\\breakoutUtils.cpp",
                 "-o",
                 "${workspaceFolder}\\main.exe",
                 "-I${workspaceFolder}\\Header Files",
