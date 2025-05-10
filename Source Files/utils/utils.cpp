@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <cctype>
+#include "../Header Files/utils.hpp"
 
 std::string toLowerString(const std::string& input) {
     std::string result = input;
